@@ -5,12 +5,7 @@ let s=document.getElementById("s");
 setInterval(tick,1000)
 
 function tick(){
-
- 
-     
     let d=new Date();
-    let d1=new Date("2025-12-31");
-   
     let hours=23-d.getHours();
     if (hours<10) {
         hours="0"+hours;
@@ -27,19 +22,3 @@ function tick(){
     m.innerHTML=minutes+":";
     s.innerHTML=seconds;
 }
-
-const title=document.querySelector(".post-container h3")
-const body =document.querySelector(".post-container span")
-fetch ('https://jsonplaceholder.typicode.com/posts')
-.then(response => {
-    console.log(response)
-    return response.json()})
-    .then(data => addPost(data[0].body))
-
-    function addPost(t,b){
-    title.innerHTML=t
-    body.innerHTML=b
-    }
-   
-    
-
