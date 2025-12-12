@@ -10,7 +10,6 @@ function tick(){
      
     let d=new Date();
     let d1=new Date("2025-12-31");
-    alert ((d1-d)/24/60/60/1000);
    
     let hours=23-d.getHours();
     if (hours<10) {
